@@ -1,0 +1,220 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif; /* Body font */
+    font-weight: bold;
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif; 
+    font-weight: bold; 
+    font-size: 24px; 
+}
+
+label {
+    font-size: 14px; 
+    font-weight: normal; 
+}
+
+.page-menu-container {
+    display: flex;
+    justify-content: center;
+    height: 80px;
+    border: 5px solid blue;
+    background-color: #1b263b;
+    
+}
+
+.menu {
+    display: flex;
+    border: 1px solid black;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.logo {
+    height: 50px;
+}
+
+.DePaul {
+    border: 4px solid black;
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-size: 50px;
+}
+
+.login-prompt-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid gray;
+    height: 700px;
+    background-color: #1b263b;
+}
+
+.login-box {
+    background-color: white;
+    height: 500px;
+    border: 2px solid white;
+    text-align: center;
+    flex-direction: column;
+    width: 30vw;
+    display: flex; 
+    justify-content: center; 
+    padding: 20px; 
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgb(0, 0, 0); /* Adds shadow effect */
+
+}
+
+#login-form {
+    display: flex;
+    flex-direction: column; /* Stacks items vertically */
+    align-items: center; /* Center aligns items within the form */
+    gap: 20px; /* Space between each label-input group */
+    width: 100%; /* Ensures full width for the group */
+}
+
+.input-group {
+    display: flex; /* Aligns label and input vertically */
+    flex-direction: column; /* Stack label and input vertically */
+    width: 70%; /* Full width for the group */
+}
+
+form label {
+    font-weight: bold;
+    text-align: left; /* Align text to the left */
+}
+
+form input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: left; /* Aligns text inside input to the left */
+    margin-top: 5px; /* Space between label and input */
+}
+
+.sign-in-button {
+    width: 70%; /* Make the button full width */
+    padding: 10px 0; /* Add vertical padding for better appearance */
+    font-size: 16px; /* Adjust the font size */
+    background-color: blue; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* Remove default border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s; /* Smooth transition */
+    margin-top: 20px; /* Space above the button */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.sign-in-button:hover {
+    background-color: darkblue; 
+}
+
+.options-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    margin-top: 10px;
+}
+
+.options-container label {
+    display: flex;
+    align-items: center;
+}
+
+.forgot-password {
+    color: blue;
+    text-decoration: underline;
+}
+
+.forgot-password:hover {
+    text-decoration: none;
+}
+
+.options-container label, 
+.options-container .forgot-password {
+    font-size: 12px; 
+}
+
+.signup-prompt {
+    width: 70%;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.divider {
+    flex: 1; 
+    height: .5px;
+    background-color: black;
+}
+
+.signup-prompt span {
+    margin: 0 10px; 
+    font-size: 14px;
+    font-weight: normal; 
+}
+
+.create-account-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 70%;
+    padding: 10px 0;
+    font-size: 16px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+.create-account-button:hover {
+    background-color: darkblue;
+}
+
+
+
+.create-account-prompt-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid gray;
+    height: 900px;
+}
+
+.create-account-box {
+    width: 30vw;
+    height: 700px;
+    border: 2px solid white;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow:  0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+#create-account-form {
+    display: flex;
+    flex-direction: column; /* Stacks items vertically */
+    align-items: center; /* Center aligns items within the form */
+    gap: 20px; /* Space between each label-input group */
+    width: 100%; /* Ensures full width for the group */
+}
