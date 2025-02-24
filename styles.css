@@ -1,9 +1,23 @@
-body {
+html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
-    font-family: 'Open Sans', sans-serif; /* Body font */
+    display: flex;
+    font-family: 'Open Sans', sans-serif; 
     font-weight: bold;
+    flex-direction: column;
 }
+
+.footer {
+    background-color: #1b263b; 
+    color: white;
+    text-align: center;
+    padding: 10px 0; 
+    position: relative;
+    width: 100%;
+    flex-shrink: 0;
+}
+
 
 h2 {
     font-family: 'Roboto', sans-serif; 
@@ -17,19 +31,18 @@ label {
 }
 
 .page-menu-container {
+    padding: 20px;
     display: flex;
     justify-content: center;
     height: 80px;
-    border: 5px solid blue;
     background-color: #1b263b;
     
 }
 
 .menu {
     display: flex;
-    border: 1px solid black;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     width: 100%;
 }
 
@@ -38,20 +51,20 @@ label {
 }
 
 .DePaul {
-    border: 4px solid black;
     margin-left: 30px;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 10px;
     color: white;
     font-size: 50px;
 }
 
 .login-prompt-container {
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 5px solid gray;
     height: 700px;
     background-color: #1b263b;
 }
@@ -67,48 +80,48 @@ label {
     justify-content: center; 
     padding: 20px; 
     border-radius: 20px;
-    box-shadow: 0 4px 15px rgb(0, 0, 0); /* Adds shadow effect */
+    box-shadow: 0 4px 15px rgb(0, 0, 0); 
 
 }
 
 #login-form {
     display: flex;
-    flex-direction: column; /* Stacks items vertically */
-    align-items: center; /* Center aligns items within the form */
-    gap: 20px; /* Space between each label-input group */
-    width: 100%; /* Ensures full width for the group */
+    flex-direction: column; 
+    align-items: center; 
+    gap: 20px; 
+    width: 100%; 
 }
 
 .input-group {
-    display: flex; /* Aligns label and input vertically */
-    flex-direction: column; /* Stack label and input vertically */
-    width: 70%; /* Full width for the group */
+    display: flex; 
+    flex-direction: column; 
+    width: 70%; 
 }
 
 form label {
     font-weight: bold;
-    text-align: left; /* Align text to the left */
+    text-align: left; 
 }
 
 form input {
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    text-align: left; /* Aligns text inside input to the left */
-    margin-top: 5px; /* Space between label and input */
+    text-align: left; 
+    margin-top: 5px; 
 }
 
 .sign-in-button {
-    width: 70%; /* Make the button full width */
-    padding: 10px 0; /* Add vertical padding for better appearance */
-    font-size: 16px; /* Adjust the font size */
-    background-color: blue; /* Button background color */
-    color: white; /* Button text color */
-    border: none; /* Remove default border */
-    border-radius: 4px; /* Rounded corners */
-    cursor: pointer; /* Change cursor to pointer on hover */
-    transition: background-color 0.3s; /* Smooth transition */
-    margin-top: 20px; /* Space above the button */
+    width: 70%; 
+    padding: 10px 0; 
+    font-size: 16px; 
+    background-color: blue; 
+    color: white; 
+    border: none;
+    border-radius: 4px; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+    margin-top: 20px; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -190,14 +203,16 @@ form input {
 
 
 .create-account-prompt-container {
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 5px solid gray;
     height: 900px;
+    background-color: #1b263b;
 }
 
 .create-account-box {
+    background-color: white;
     width: 30vw;
     height: 700px;
     border: 2px solid white;
@@ -208,13 +223,31 @@ form input {
     justify-content: center;
     padding: 20px;
     border-radius: 10px;
-    box-shadow:  0 4px 15px rgba(0, 0, 0, 0.3);
+    box-shadow:  0 4px 15px rgb(0, 0, 0);
 }
 
 #create-account-form {
     display: flex;
-    flex-direction: column; /* Stacks items vertically */
-    align-items: center; /* Center aligns items within the form */
-    gap: 20px; /* Space between each label-input group */
-    width: 100%; /* Ensures full width for the group */
+    flex-direction: column; 
+    align-items: center; 
+    gap: 20px; 
+    width: 100%;
+}
+
+.back-button {
+    display: block;
+    width: 40%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #ccc;
+    color: #000;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.back-button:hover {
+    background-color: #bbb;
 }
