@@ -1,23 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
-    document.getElementById("login-form").addEventListener("submit", function(event) {
-        event.preventDefault(); // Prevents form submission
+    
+    // Registration Form Submission
+    document.getElementById("create-account-form")?.addEventListener("submit", function (event) {
+        event.preventDefault();
 
-        let username = document.getElementById("username").value.trim();
-        let password = document.getElementById("password").value.trim();
-
-        if (username !== "" && password !== "") {
-            alert("Account created successfully! (Demo Mode)");
-        } else {
-            alert("Please fill in both fields.");
-        }
-    });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-    document.getElementById("create-account-form").addEventListener("submit", function (event) {
-        event.preventDefault(); // Prevent form submission for now
-
-        // Get form values
         let firstName = document.getElementById("first-name").value.trim();
         let secondName = document.getElementById("second-name").value.trim();
         let email = document.getElementById("email").value.trim();
@@ -26,24 +12,62 @@ document.addEventListener("DOMContentLoaded", function () {
         let repeatPassword = document.getElementById("repeat-password").value.trim();
         let collegeType = document.getElementById("college-type").value;
 
-        // Check if any field is empty
+        // Ensure all fields are filled
         if (!firstName || !secondName || !email || !username || !password || !repeatPassword || collegeType === "*Select your option*") {
             alert("Please fill in all fields before proceeding.");
             return;
         }
 
-        // Check if passwords match
+        // Validate password
+        if (password.length < 6 || !/[!@#$%^&*(),.?":{}|<>]/.test(password)) {
+            alert("Password must be at least 6 characters long and contain at least one special character: ! @ # $ % ^ & * ( ) , . ? \" : { } | < > -");
+            return;
+        }
+
+        // Ensure passwords match
         if (password !== repeatPassword) {
             alert("Passwords do not match. Please try again.");
             return;
         }
 
-        alert("Account successfully created! Welcome to DeConnect.");
+        // Store user credentials in localStorage
+        let userData = {
+            username: username,
+            email: email,
+            password: password
+        };
 
-        this.reset();
+        localStorage.setItem("userData", JSON.stringify(userData));
+
+        alert("Account successfully created! Redirecting to login...");
+        window.location.href = "index.html"; // Redirect to login page
     });
-});
 
-document.getElementById("back-to-login").addEventListener("click", function () {
-    window.location.href = "index.html"; 
+    // Login Form Submission
+    document.getElementById("login-form")?.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        let input = document.getElementById("username").value.trim(); // Can be email or username
+        let password = document.getElementById("password").value.trim();
+
+        // Retrieve stored user data
+        let storedUser = JSON.parse(localStorage.getItem("userData"));
+
+        if (!storedUser) {
+            alert("No account found. Please register first.");
+            return;
+        }
+
+        if ((input === storedUser.username || input === storedUser.email) && password === storedUser.password) {
+            alert("Login successful! Redirecting...");
+            window.location.href = "home.html"; // Redirect to home page
+        } else {
+            alert("Invalid credentials. Please try again.");
+        }
+    });
+
+    // Back to Login button
+    document.getElementById("back-to-login")?.addEventListener("click", function () {
+        window.location.href = "index.html"; 
+    });
 });

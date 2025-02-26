@@ -8,6 +8,11 @@ html, body {
     flex-direction: column;
 }
 
+body {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400; 
+}
+
 .footer {
     background-color: #1b263b; 
     color: white;
@@ -20,8 +25,8 @@ html, body {
 
 
 h2 {
-    font-family: 'Roboto', sans-serif; 
-    font-weight: bold; 
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600; 
     font-size: 24px; 
 }
 
@@ -79,7 +84,7 @@ label {
     display: flex; 
     justify-content: center; 
     padding: 20px; 
-    border-radius: 20px;
+    border-radius: 25px;
     box-shadow: 0 4px 15px rgb(0, 0, 0); 
 
 }
@@ -106,7 +111,7 @@ form label {
 form input {
     padding: 8px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 10px;
     text-align: left; 
     margin-top: 5px; 
 }
@@ -118,7 +123,7 @@ form input {
     background-color: blue; 
     color: white; 
     border: none;
-    border-radius: 4px; 
+    border-radius: 10px; 
     cursor: pointer; 
     transition: background-color 0.3s; 
     margin-top: 20px; 
@@ -190,7 +195,7 @@ form input {
     background-color: blue;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s;
     margin-top: 20px;
