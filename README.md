@@ -1,4 +1,4 @@
-# DeConenct Login and Account Creation Page
+# DeConnect Login and Account Creation Page
 
 ## **Overview**
 
